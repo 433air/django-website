@@ -1,0 +1,7 @@
+Flask==1.0.2
+Pillow==5.3.0
+Django==1.11.17
+SQLAlchem==1.2.15
+MySQL-python==1.2.3
+
+apt-get install libmysqlclient-dev
