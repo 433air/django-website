@@ -4,7 +4,7 @@
 <html lang="zh-cn">
 
   <head>
-
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -24,6 +24,32 @@
     <link href="/static/bootstrap/css/clean-blog.min.css" rel="stylesheet">
 
     <td>{{mytags_upper}}</td>
+
+	<Script language="javascript">
+	function getParam(paramName, page) {
+		paramValue = "", isFound = !1; 
+		if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=") > 1) { 
+			arrSource = this.location.search.substring(1, this.location.search.length).split("&"), i = 0; 
+			while (i < arrSource.length && !isFound) arrSource[i].indexOf("=") > 0 && arrSource[i].split("=")[0].toLowerCase() == paramName.toLowerCase() && (paramValue = arrSource[i].split("=")[1], isFound = !0), i++ 
+			} 
+			if (paramValue == "" || paramValue == null){
+				window.location.href= "?page=" + page
+			}else{
+				window.location.href= "?tag="+ decodeURI(paramValue) + "&page=" + page
+			}
+	}
+	</script>
+
+	<Script language="javascript">
+		function getTag(paramName) {
+		paramValue = "", isFound = !1;
+		if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=") > 1) {
+			arrSource = this.location.search.substring(1, this.location.search.length).split("&"), i = 0;
+			while (i < arrSource.length && !isFound) arrSource[i].indexOf("=") > 0 && arrSource[i].split("=")[0].toLowerCase() == paramName.toLowerCase() && (paramValue = arrSource[i].split("=")[1], isFound = !0), i++
+		}
+		return paramValue == "" && (paramValue = null), paramValue
+	}
+	</script> 
 
   </head>
 
@@ -72,6 +98,7 @@
     <div class="container">
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
+		
           {% for message in all_messages %}
           <div class="post-preview">
             <a href="{% url 'detail' message.id %}">
@@ -82,8 +109,8 @@
                {{message.content}}
               </h3>
             </a>
-            <p class="post-meta">Posted by
-              <a href="#">{{message.tag_id}}</a>
+            <p class="post-meta">标签
+              <a href="?tag={{message.tag.name }}">{{message.tag.name }}</a>
               {{message.pub_date}}</p>
           </div>
           <hr>
@@ -94,17 +121,18 @@
 		<center>
 
         {% if all_messages.has_previous %}
-            <a class="btn btn-primary float-center " href="?page={{ all_messages.previous_page_number }}"><</a>
+            <a class="btn btn-primary float-center " href="javascript:getParam('tag',{{ all_messages.previous_page_number}});"><</a>
         {% endif %}
-	
-			{% for page in all_messages.paginator.page_range %}
-				{% circle_page  all_messages.number page%}
-			{% endfor %} 
-
+		
+		{% for page in all_messages.paginator.page_range %}
+			{% circle_page all_messages.number page hastag %}
+		{% endfor %} 
+		
         {% if all_messages.has_next %}
-            <a class="btn btn-primary float-center " href="?page={{ all_messages.next_page_number }}">></a>
+            <a class="btn btn-primary float-center " href="javascript:getParam('tag',{{ all_messages.next_page_number}});">></a>
         {% endif %}
-		</center>
+
+         </center>
           </div>
         </div>
       </div>
