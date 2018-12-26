@@ -26,7 +26,7 @@ mail_info = {
 
 def sendemail(name, phone, email, message):
 	try:
-		smtp = SMTP_SSL(mail_info["hostname"])
+		smtp = SMTP_SSL(mail_info["hostname"], 465)
 		smtp.set_debuglevel(1)
 		
 		mail_text = '''
