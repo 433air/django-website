@@ -21,8 +21,8 @@ $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
 	$this = $("#sendMessageButton");
 	$this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
 	$.ajax({
-		url: "http://localhost:5000/sendemail",
-		type: "GET",
+		url: "http://47.101.214.113:5000/sendemail",
+		type: "POST",
 		dataType: "script",
 		data: {
 		name: name,

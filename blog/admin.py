@@ -6,7 +6,7 @@ from . import models
 # Register your models here.
 
 class MessageAdmin(admin.ModelAdmin):
-	list_display = ['tag', 'title', 'content', 'img', 'pub_date', 'views']
+	list_display = ['tag', 'title', 'content', 'pub_date', 'views']
 
 admin.site.register(models.Tag)
 admin.site.register(models.Message, MessageAdmin)

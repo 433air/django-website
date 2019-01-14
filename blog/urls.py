@@ -12,4 +12,6 @@ urlpatterns = [
 	url(u'^post$', views.post, name = 'post'),
 	url(u'^contact', views.contact, name = 'contact'),
 	url(u'^detail/(?P<blog_id>\d+)/$', views.detail, name = 'detail'),
+	url(u'^newpost', views.newpost, name = 'newpost'),
+    url(r'^upload_image$', views.upload_image, name = 'upload_image'),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

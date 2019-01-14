@@ -2,129 +2,128 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 
-  <head>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<title>春夏秋冬</title>
 
-    <title>春夏秋冬</title>
+	<!-- Bootstrap core CSS -->
+	<link href="/static/bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="/static/bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom fonts for this template -->
+	<link href="/static/bootstrap/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-    <!-- Custom fonts for this template -->
-    <link href="/static/bootstrap/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<!-- Custom styles for this template -->
+	<link href="/static/bootstrap/css/clean-blog.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="/static/bootstrap/css/clean-blog.min.css" rel="stylesheet">
+</head>
 
-  </head>
+<body style = "overflow-y:scroll" >
 
-  <body style = "overflow-y:scroll" >
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+	<div class="container">
+		<a class="navbar-brand" href="/">春夏秋冬</a>
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			Menu
+			<i class="fas fa-bars"></i>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="/">首页</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/about">关于433</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/post">文章</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/contact">与我联系</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand" href="/">春夏秋冬</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/">首页</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about">关于433</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/post">文章</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contact">与我联系</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+	<!-- Page Header -->
+	<header class="masthead" style="background-image: url('/static/bootstrap/img/contact-bg.jpg')">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+				<div class="page-heading">
+					<h1>与我联系</h1>
+					<span class="subheading">魔界通讯器</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	</header>
 
-    <!-- Page Header -->
-    <header class="masthead" style="background-image: url('/static/bootstrap/img/contact-bg.jpg')">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="page-heading">
-              <h1>与我联系</h1>
-              <span class="subheading">魔界通讯器</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+	<!-- Main Content -->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+			<p>有问题？可以在这里联系我，我会尽量回复。</p>
+				<form name="sentMessage" id="contactForm" novalidate>
+					<div class="control-group">
+						<div class="form-group floating-label-form-group controls">
+							<label>Name</label>
+							<input type="text" class="form-control" placeholder="称呼" id="name" required data-validation-required-message="请输入你的昵称">
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="form-group floating-label-form-group controls">
+							<label>Email Address</label>
+							<input type="email" class="form-control" placeholder="邮箱" id="email" required data-validation-required-message="请输入你的邮箱地址">
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>Phone Number</label>
+							<input type="tel" class="form-control" placeholder="电话" id="phone" required data-validation-required-message="请输入你的电话号码">
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="form-group floating-label-form-group controls">
+							<label>Message</label>
+							<textarea rows="5" class="form-control" placeholder="问题" id="message" required data-validation-required-message="请输入你的消息"></textarea>
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+					<br>
+					<div id="success"></div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary" id="sendMessageButton" return false;>发送邮件</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 
-    <!-- Main Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <p>有问题？可以在这里联系我，我会尽量回复。</p>
-          <form name="sentMessage" id="contactForm" novalidate>
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls">
-                <label>Name</label>
-                <input type="text" class="form-control" placeholder="称呼" id="name" required data-validation-required-message="请输入你的昵称">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls">
-                <label>Email Address</label>
-                <input type="email" class="form-control" placeholder="邮箱" id="email" required data-validation-required-message="请输入你的邮箱地址">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="control-group">
-              <div class="form-group col-xs-12 floating-label-form-group controls">
-                <label>Phone Number</label>
-                <input type="tel" class="form-control" placeholder="电话" id="phone" required data-validation-required-message="请输入你的电话号码">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls">
-                <label>Message</label>
-                <textarea rows="5" class="form-control" placeholder="问题" id="message" required data-validation-required-message="请输入你的消息"></textarea>
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <br>
-            <div id="success"></div>
-            <div class="form-group">
-              <button type="submit" class="btn btn-primary" id="sendMessageButton" return false;>发送邮件</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+	<hr>
 
-    <hr>
+	<!-- Bootstrap core JavaScript -->
+	<script src='/static/bootstrap/vendor/jquery/jquery.min.js'></script>
+	<script src='/static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src='/static/bootstrap/vendor/jquery/jquery.min.js'></script>
-    <script src='/static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+	<!-- Contact Form JavaScript -->
+	<script src='/static/bootstrap/js/jqBootstrapValidation.js'></script>
+	<script src='/static/bootstrap/js/contact_me.js'></script>
 
-    <!-- Contact Form JavaScript -->
-    <script src='/static/bootstrap/js/jqBootstrapValidation.js'></script>
-    <script src='/static/bootstrap/js/contact_me.js'></script>
+	<!-- Custom scripts for this template -->
+	<script src='/static/bootstrap/js/clean-blog.min.js'></script>
 
-    <!-- Custom scripts for this template -->
-    <script src='/static/bootstrap/js/clean-blog.min.js'></script>
-
-  </body>
+</body>
 
 </html>
