@@ -129,7 +129,7 @@ def upload_image(request):
 
 		else:
 			HttpResponse(json.dumps({'success':0,'message':'上传失败'}, ensure_ascii=False), content_type="application/json")
-		return HttpResponse(json.dumps({'success':1,'message':'', 'url': get_host_ip() +'/media/%s' + name}, ensure_ascii=False), content_type="application/json")
+		return HttpResponse(json.dumps({'success':1,'message':'', 'url': get_host_ip() +'/media/' + filename}, ensure_ascii=False), content_type="application/json")
 
 # {
 #   'success(1表示成功,0表示失败)': 1(或0),
